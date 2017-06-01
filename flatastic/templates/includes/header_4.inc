@@ -65,7 +65,7 @@ $data = arg(0);
 							}
 						?>
 						<a href="<?php print $front_page; ?>" class="logo m_xs_bottom_10 d_inline_b">
-							<img width="auto" height="auto" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>">
+							SpatikaSarees
 						</a>
 					<?php endif; ?>
                     <div class="searchform_wrap m_xs_bottom_10 type_3 bg_tr tf_xs_none tr_all_hover w_inherit p_hr_0">
