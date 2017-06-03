@@ -48,7 +48,7 @@ if (!empty($node->field_image['und'])) {
                 <span class="hot_stripe type_2"><img width="82px" height="82px" src="<?php print $theme_root; ?>/images/sale_product_type_2.png" alt=""></span>
             <?php endif; ?>
         <?php endif;?>
-        <img width="242px" height="242px" src="<?php print $single_image; ?>" class="tr_all_hover" alt="">
+        <img width="330px" height="355px" src="<?php print $single_image; ?>" class="tr_all_hover" alt="">
     </a>
     <!--description and price of product-->
     <figcaption class="p_vr_0">

@@ -133,7 +133,7 @@ ol.search-results a:hover{
 
 /* Contact Form */
 .social_widgets .contact-form .form-item-subject,
-.social_widgets .contact-form .form-item label, 
+.social_widgets .contact-form .form-item label,
 .contact-form .form-actions{display: none;}
 .social_widgets .contact-form .form-textarea{height: 140px;}
 .form-item{margin: 0;}
@@ -1159,7 +1159,7 @@ p.f-price{
   margin-bottom: 15px;
 }
 #login_popup .form-item:last-child{
-    margin-bottom: 25px;   
+    margin-bottom: 25px;
 }
 #login_popup label {
   margin-bottom: 5px;
@@ -1224,7 +1224,7 @@ p.f-price{
 #search-header-3 .form-submit:hover{
     background: none repeat scroll 0 0 #34495e;
     box-shadow: 0 2px 0 #2c3e50;
-    color: #fff;    
+    color: #fff;
 }
 #search-header-4 .form-text{
     padding: 9px 0;
@@ -1775,7 +1775,7 @@ div.c-testi ,div.c-testi  h5.color_dark{
   padding: 0;
 }
 .filter_sidebar .views-exposed-widget > label {
-	margin-bottom: 15px; 
+	margin-bottom: 15px;
 	font-size: 1.15em;
 	color: #696e6e;
 }
@@ -1942,14 +1942,14 @@ margin-bottom: 5px !important;
     color: #252525;
 }
 #newsletter-manage-subscriptions-form .form-text{
-    border-radius: 4px;    
+    border-radius: 4px;
 }
 #newsletter-manage-subscriptions-form .form-select{
     border: 2px solid #e4e4e2;
     border-radius: 4px;
     height: 40px;
     padding: 0 10px;
-    width: 200px; 
+    width: 200px;
 }
 #newsletter-manage-subscriptions-form .form-select option{
     padding: 0 10px;
@@ -1974,8 +1974,8 @@ margin-bottom: 5px !important;
     font-size: 1.4em;
 }
 .block-simplenews .content p{
-    font-size: 0.9em;  
-    margin-bottom: 15px; 
+    font-size: 0.9em;
+    margin-bottom: 15px;
 }
 .simplenews-subscribe label,
 #simplenews-subscriptions-multi-block-form label{
@@ -2725,7 +2725,7 @@ margin-left: 40px;
 
 }
 @media (max-width: 767px){
-    .tb-megamenu .nav-collapse .nav > li > a, .tb-megamenu .nav-collapse .dropdown-menu a{color: #292f38;}    
+    .tb-megamenu .nav-collapse .nav > li > a, .tb-megamenu .nav-collapse .dropdown-menu a{color: #292f38;}
 }
 
 /* MAINTAINCE PAGE */
@@ -2741,7 +2741,7 @@ margin-left: 40px;
 }
 
 #maintenance {
-  background: url(../images/maintenance_bg.png) no-repeat center center fixed; 
+  background: url(../images/maintenance_bg.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2808,4 +2808,88 @@ margin-left: 40px;
 .view-blog article img.tr_all_long_hover {width: 100%;}
 .description .description-selected .field.field-name-field-hexadecimal.field-type-text.field-label-hidden {
     outline: #e74c3c solid;
+}
+
+
+
+body {
+  background: #f1f0f1 !important;
+}
+
+
+/* slider start */
+
+/*.tp-simpleresponsive .caption, .tp-simpleresponsive .tp-caption {
+  font-size: 35px !important;
+}*/
+
+/* slider Ends */
+
+
+/*  logo Start */
+
+.s_form_wrap_2 .logo {
+  margin-left: 32px;
+  font-size: 45px;
+  margin-top: 10px;
+}
+
+.default_t_color {
+  color: #fff;
+}
+
+.form-item-search-block-form {
+  background: #fafbfb;
+  line-height: 65px;
+  height: 68px;
+  margin-top: -16px !important;
+  display: block !important;
+}
+
+#search-header-4 .form-text {
+  border-bottom: 1px solid #eaeaea !important;
+}
+
+.h_bot_part.type_2 {
+  padding-bottom: 10px;
+}
+
+/*  logo ends */
+
+/* Nav start */
+
+.tb-megamenu .nav > .active > a, .tb-megamenu .nav > .active > a:hover, .tb-megamenu .nav > .active > a:focus {
+  background-color: inherit !important;
+  color: #9a9a9a;
+  font-weight: 500;
+}
+
+.tb-megamenu .nav li.dropdown.active > .dropdown-toggle, .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle, .tb-megamenu .nav > li.dropdown.open.active > a:hover {
+  color: #f00;
+}
+
+.tb-megamenu-nav.type_3 > li {
+  margin-left: 0px !important;
+}
+
+.tb-megamenu .nav li.dropdown.open > .dropdown-toggle .caret, .tb-megamenu .nav li.dropdown.active > .dropdown-toggle .caret, .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: #ff0505;
+    border-bottom-color: #ff0303;
+}
+
+/* Nav Ends */
+
+.hot_stripe { display: none;}
+
+/* item css start */
+.front .category_grid .product_item {
+  width: 350px;
+}
+
+.front .col-lg-9 {
+  width: 100%;
+}
+
+.front .commerce-add-to-cart .attribute-widgets, .not-front .commerce-add-to-cart .attribute-widgets {
+  display: none;
 }
