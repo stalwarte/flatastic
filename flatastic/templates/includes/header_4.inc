@@ -56,7 +56,7 @@ $data = arg(0);
             <div class="col-lg-8 col-md-7 col-sm-8 clearfix t_xs_align_c">
                 <div class="relative f_left s_form_wrap_2">
                     <?php if ($logo): ?>
-						<?php 
+						<?php
 							if(theme_get_setting('use_logo_default') == 0) {
 								if(strpos($curr_uri, 'index-construction') || theme_get_setting('demo') == 'construction') { $logo = file_create_url(theme_get_setting('logo_construction')); }
 								elseif(strpos($curr_uri, 'index-corporate') || theme_get_setting('demo') == 'corporate') { $logo = file_create_url(theme_get_setting('logo_corporate')); }
@@ -136,7 +136,7 @@ $data = arg(0);
                 <span class="centered_db r_corners"></span>
             </button>
             <!--main menu-->
-            <nav role="navigation" class="d_xs_none d_inline_b t_align_l">  
+            <nav role="navigation" class="d_xs_none d_inline_b t_align_l">
                 <?php print render($page['menu']); ?>
             </nav>
         </div>

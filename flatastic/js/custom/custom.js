@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
 
     // Add class newsletter form
     jQuery('.block-newsletter .form-submit').addClass('m-top-20 button_type_8 r_corners bg_scheme_color color_light tr_all_hover');
-    
+
     //Add class menu
     jQuery('.main_menu .active').parent().addClass('current');
     jQuery('.main_menu .active').removeClass('active');
@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 
     // Out of Stock
     jQuery('.out-of-stock').val('Out of Stock');
-	
+
 	jQuery('.pager-load-more .next a').html('Load More');
 
     //Menu Carousel
@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
         jQuery(this).parent().toggleClass('m-icon');
     });
 
-    
+
 });
 /*jQuery(window).onload(function(){
 
@@ -143,12 +143,52 @@ function viewCarousel(quick_view_product_id){
             $('.navigation-onepage').toggle(800);
             $(this).toggleClass('active');
 
-        })
+        });
+
+    //  $('.pane-title').wrap('<div class="featured_wrap"><span>');
+      $('.view-id-product_block .view-header h2').wrap('<div class="featured_wrap"><span>');
+      $('.featured_wrap span').after('<p>Chettinad Cotton saree with hand embroidered readymade blouse</p>')
 
 
 
+      // Keep only 3 featured collections
+      $('.view-display-id-block_featured .products_container > div:gt(2)').hide();
+      $('.view-display-id-block_featured .products_container').append('<div class="glass_wrap"><div class="glass_inner_wrap"><div class="text_block"><h1>SpatikaSarees</h1><h3>Featured Collections</h3><a class="exploreBtn" href="#">Explore the collection</a></div><ul class="cat_list"><li><a href="/shop/cotton">Cotton</a></li><li><a href="/shop/silk">Silk</a></li><li><a href="/shop/silk-cotton">Silk Cotton</a></li></ul></div></div>');
 
-    })
+
+      // var cat_list = '';
+      // $('.tb-megamenu-nav li:first-child').find('.tb-megamenu-submenu .level-1 li').each(function() {
+      //   cat_list+= <$(this).context.innerHTML;
+      // });
+      //
+      // console.log(cat_list, $('.glass_wrap .glass_inner_wrap a.exploreBtn:hover .cat_list').length);
+      // $('.glass_wrap .glass_inner_wrap a.exploreBtn:hover .cat_list').append(cat_list);
+
+
+      $('.glass_wrap .glass_inner_wrap a.exploreBtn').mouseover(function() {
+        $('.cat_list').css({
+          'margin-top': '15px',
+          'opacity': 1
+        });
+      }).mouseleave(function() {
+        $('.cat_list').css({
+          'margin-top': '15px',
+          'opacity': 1
+        });
+      });
+
+      $('.glass_wrap').mouseleave(function() {
+        console.log('hi');
+        $('.cat_list').css({
+          'margin-top': '0px',
+          'opacity': 0
+        });
+      });
+
+      $('#product_block-block_new_collection .photoframe').removeClass('shadow');
+      // $('#product_block-block_new_collection figure').removeClass('photoframe');
+
+    });
 
 
 })(jQuery);
