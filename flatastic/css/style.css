@@ -505,16 +505,17 @@ label[class*="required"]:after,.vertical_list_type_7 li:before,.first_letter_1 >
 .camera_wrap .camera_prev:hover, .camera_wrap .camera_next:hover,.flex-control-nav .flex-active,
 .flex-direction-nav a:hover,.vertical_list_type_4 li:before,.vertical_list_type_8 li:before,
 .first_letter_2 > .fl,.info_block_type_2:hover [class*="icon_wrap"],#shopping_button:hover > a .count{
-	background:#e74c3c;
+	background:#f8007b;
+	color: #fff;
 }
 .select_color.red{
-	background-color:#e74c3c;
+	background-color:#f8007b;
 }
 .tp-leftarrow:hover,.tp-rightarrow:hover{
 	background: #d55a4e
 }
 ::-webkit-scrollbar-thumb{
-	background:#e74c3c;
+	background:#f8007b;
 }
 
 /* -----------------------------------
@@ -1890,17 +1891,18 @@ blockquote:after{
 	opacity:1;
 }
 #go_to_top{
-	width:40px;
-	height:40px;
-	color:#fff;
-	background:#262c34;
-	position:fixed;
-	right:15px;
-	left: auto;
-	margin:-20px 0 0 620px;
-	/*top:50%;*/
-	top:60%;
-	font-size:1.65em;
+	width: 40px;
+  height: 40px;
+  color: #000;
+  background: #ffffff;
+  position: fixed;
+  right: 74px;
+  left: auto;
+  margin: -20px 0 0 620px;
+  /* top: 50%; */
+  top: 60%;
+  font-size: 1.65em;
+  border: 1px solid #000;
 }
 #go_to_top.type_2.animate_horizontal_finished{
 	opacity:.5;
@@ -2315,6 +2317,7 @@ hr{
 	padding:14px 15px 20px;
 }
 .page_content_offset{
+	background: #fff;
 	padding:60px 0;
 }
 .product_item,.owl-item > .photoframe{
@@ -3136,7 +3139,6 @@ fieldset legend .close_fieldset{
 
 #footer {
 	background: #fff;
-	border-top: 1px solid #000;
   color: #bdc3c7;
   float: left;
   padding: 45px 0 0;

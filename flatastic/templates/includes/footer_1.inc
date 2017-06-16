@@ -2,15 +2,29 @@
 $data = arg(0);
  ?>
 <footer id="footer">
-
+  <div class="row clearfix black_bg">
+    <div class="container">
+      <div class="content_wrap">
+        <h3>Our Identity</h3>
+        <h1>Behind the Brand</h1>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        </p>
+        <div class="wall_frame">
+          <img src="../sites/all/themes/flatastic/images/12.jpg" alt="" width="423" height="793">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row clearfix">
+        <div class="col-lg-12 footer_wrap">
+          <h1> Stay Connected with SpatikaSarees </h1>
+          <input type="text" class="collect_mail" /><input class="sub_btn" type="submit" value="&nbsp;">
+        </div>
+      </div>
+    </div>
   <div class="footer_top_part">
     <div class="container">
-        <div class="row clearfix">
-          <div class="col-lg-12">
-
-          </div>
-        </div>
-
         <div class="row clearfix">
           <div class="col-lg-12">
                 <?php if ($page['footer_2']) : print render($page['footer_2']); endif; ?>
