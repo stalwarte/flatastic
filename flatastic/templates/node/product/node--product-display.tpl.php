@@ -84,7 +84,7 @@ if (!empty($node->field_image['und'])) {
 
 <?php else:?>
 
-<div class="clearfix m_bottom_30 t_xs_align_c">
+<div class="clearfix m_bottom_30 t_xs_align_c product_quick_view">
     <div id="quick_view_product_<?php echo $id ?>" class="photoframe type_2 shadow r_corners f_left f_sm_none d_xs_inline_b product_single_preview relative m_right_30 m_bottom_5 m_sm_bottom_20 m_xs_right_0 w_mxs_full">
         <?php if(theme_get_setting('demo') == 'interior'):?>
                 <?php if (strpos($str_att,'specials')): ?>
@@ -192,6 +192,17 @@ if (!empty($node->field_image['und'])) {
         </div>
         <div class="d_ib_offset_0 m_bottom_20 p-add-one add-cart">
             <div class="c-cart">
+
+              <span class="custom_checkBox falls">
+                <i class="fa fa-check falls_Check" aria-hidden="false"></i>
+                <span class="add_falls"> <?php print t('Add falls to Saree'); ?> </span>
+              </span>
+              <br/>
+              <span class="custom_checkBox stiching">
+                <i class="fa fa-check stiching_Check" aria-hidden="false"></i>
+                <span class="add_falls"> <?php print t('Custom Stiching'); ?> </span>
+              </span>
+
                 <?php print render($content['field_product']); ?>
             </div>
             <?php if (module_exists('flag')): ?>
@@ -273,4 +284,3 @@ if (!empty($node->field_image['und'])) {
 <hr class="divider_type_3 m_bottom_15">
 <a href="javascript:history.go(-1)" role="button" class="d_inline_b bg_light_color_2 color_dark tr_all_hover button_type_4 r_corners"><i class="fa fa-reply m_left_5 m_right_10 f_size_large"></i><?php print t('Back');?></a>
 <?php endif;?>
-

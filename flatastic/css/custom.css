@@ -2933,6 +2933,12 @@ body {
   display: none;
 }
 
+.node-type-product-display .product_quick_view .commerce-add-to-cart .attribute-widgets {
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+
 
 .region-slider {
   /*display: none;*/
@@ -3278,7 +3284,7 @@ h2.pane-title, .featured_wrap span h2 {
     top: 0;
 }
 .black_bg .wall_frame img {
-  width: 92%;
+  width: 92% !important;
 }
 
 
@@ -3384,4 +3390,94 @@ h2.pane-title, .featured_wrap span h2 {
 .pane-simplenews {
   padding: 250px 0px;
   text-align: center;
+}
+
+.custom_checkBox {
+  border: 1px solid #000;
+  cursor: pointer;
+  height: 20px;
+  position: relative;
+  width: 20px;
+  display: block;
+}
+
+.custom_checkBox .fa-check {
+  font-weight: normal;
+  position: absolute;
+  left: 2px;
+  top: -1px;
+}
+
+.custom_checkBox .fa-check[aria-hidden = true] {
+  display: block;
+}
+.custom_checkBox .fa-check[aria-hidden = false] {
+  display: none;
+}
+.custom_checkBox .add_falls {
+  position: absolute;
+    left: 26px;
+    width: 300px;
+}
+
+
+/* Custom pop */
+
+.custom-popup-cover {
+  position: fixed;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    z-index: 999;
+    display: none;
+}
+
+.custom_popup {
+  display: table;
+  position: fixed;
+    height: 500px;
+    width: 500px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    padding: 10px;
+    z-index: 999;
+}
+.custom_pop_wrap {
+    border: 1px solid #000;
+    display: table-cell;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.custom_pop_wrap .fa-window-close {
+  position: absolute;
+    z-index: 9999;
+    height: 25px;
+    display: block;
+    width: 25px;
+    top: 18px;
+    right: 18px;
+}
+
+.custom_pop_wrap h1 {
+  text-transform: uppercase;
+    font-size: 45px;
+    line-height: 55px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .custom_pop_wrap:hover h1 {
+    color: #f8007b;
+  }
+
+.custom_pop_wrap .message_pop {
+  font-size: 28px;
+    line-height: 27px;
 }

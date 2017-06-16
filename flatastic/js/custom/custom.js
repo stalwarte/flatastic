@@ -197,6 +197,52 @@ function viewCarousel(quick_view_product_id){
       $('<div class="new_header"></div>').insertAfter('.breadcrumbs');
       $('.new_header').append(banner_wrap);
 
+      // Falls custom_checkBox
+      var isChecked = false;
+      $('.falls').on('click', function() {
+        isChecked = $(this).find('.falls_Check').attr('aria-hidden');
+        console.log(isChecked, 'test');
+        if (isChecked === "true") {
+          console.log(isChecked);
+          $(this).find('.falls_Check').attr('aria-hidden', !isChecked);
+          $('.form-item-attributes-field-falls-selection input').eq(0).trigger('click');
+          isChecked = false;
+        } else {
+          isChecked = true;
+          $(this).find('.falls_Check').attr('aria-hidden', isChecked);
+          $('.form-item-attributes-field-falls-selection input').eq(1).trigger('click');
+
+        }
+      });
+
+
+      //Stiching checkbox
+      var isStichingChecked = false;
+      $('.stiching').on('click', function() {
+        isStichingChecked = $(this).find('.stiching_Check').attr('aria-hidden');
+        if (isStichingChecked === "true") {
+          $(this).find('.stiching_Check').attr('aria-hidden', !isStichingChecked);
+          isStichingChecked = false;
+        } else {
+          isStichingChecked = true;
+          $(this).find('.stiching_Check').attr('aria-hidden', isStichingChecked);
+          $('.custom-popup-cover').fadeIn();
+        }
+      });
+
+      $(document).keydown(function(e) {
+          if (e.keyCode == 27) {
+              $('.custom-popup-cover').fadeOut();
+          }
+      });
+
+      // PopUp
+      $('body').append('<div class="custom-popup-cover"><div class="custom_popup"><div class="custom_pop_wrap"><h1>SpatikaSarees</h1><div class="message_pop">Thankyou!! <br> We will contact you within 24 hrs</div><i class="fa fa-window-close" aria-hidden="true"></i></div></div></div>');
+      $('.custom-popup-cover').on('click', function() {
+        $(this).fadeOut();
+      });
+
+
     });
 
 
