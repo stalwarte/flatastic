@@ -188,6 +188,15 @@ function viewCarousel(quick_view_product_id){
       $('#product_block-block_new_collection .photoframe').removeClass('shadow');
       // $('#product_block-block_new_collection figure').removeClass('photoframe');
 
+      // Nav fix
+      $('.tb-megamenu-nav li:last-child, .not-front .tb-megamenu-nav li').addClass('active');
+
+       var banner_wrap = $('#block-views-image-product-category-block').detach();
+       //alert(banner_wrap);
+      // $('.breadcrumbs').append(banner_wrap);
+      $('<div class="new_header"></div>').insertAfter('.breadcrumbs');
+      $('.new_header').append(banner_wrap);
+
     });
 
 

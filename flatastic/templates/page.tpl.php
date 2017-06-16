@@ -106,7 +106,7 @@ if (count($getPageStyle1)) {
             </div>
         <?php endif; ?>
     <?php endif; ?>
-    
+
     <!-- Message -->
     <div class="message">
         <div class="container">
@@ -119,6 +119,11 @@ if (count($getPageStyle1)) {
         <div class="container wrapper">
             <?php if ($page['right_sidebar']): ?>
                 <div class="row clearfix">
+                  <aside class="col-lg-3 col-md-3 col-sm-3">
+                      <?php if ($page['right_sidebar']): ?>
+                          <?php print render($page['right_sidebar']); ?>
+                      <?php endif; ?>
+                  </aside>
                     <section class="col-lg-9 col-md-9 col-sm-9 m_xs_bottom_30">
                         <?php if(isset($title)): ?>
                             <h2 class="tt_uppercase color_dark m_bottom_20"><?php print $title; ?></h2>
@@ -128,7 +133,7 @@ if (count($getPageStyle1)) {
                                 <?php print render($tabs); ?>
                             </div>
                         <?php endif; ?>
-						
+
 						<?php if ($page['before_content']): ?>
 							<?php print render($page['before_content']); ?>
 						<?php endif; ?>
@@ -138,13 +143,8 @@ if (count($getPageStyle1)) {
                             <?php print render($page['content']); ?>
                         <?php endif; ?>
                         <?php print render($title_suffix); ?>
-						
+
                     </section>
-                    <aside class="col-lg-3 col-md-3 col-sm-3">
-                        <?php if ($page['right_sidebar']): ?>
-                            <?php print render($page['right_sidebar']); ?>
-                        <?php endif; ?>
-                    </aside>
                 </div>
             <?php else: ?>
                 <?php if(isset($title)): ?>
@@ -163,13 +163,13 @@ if (count($getPageStyle1)) {
 					<?php print render($page['content']); ?>
 				<?php endif; ?>
                 <?php print render($title_suffix); ?>
-				
+
 				<?php if ($page['after_content']): ?>
 					<?php print render($page['after_content']); ?>
 				<?php endif; ?>
             <?php endif; ?>
 
-        </div>	
+        </div>
     </div>
 
 
@@ -212,4 +212,3 @@ if (theme_get_setting('social_widget') == 1):
     endif;
 endif;
 ?>
-
