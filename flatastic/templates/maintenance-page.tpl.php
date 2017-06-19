@@ -35,7 +35,7 @@
 				<?php else: ?>
 					<h1><?php print $site_name; ?></h1>
 				<?php endif; ?>
-				<h1><?php print t('We Are Working On <span>Flatastic Drupal</span>'); ?></h1>
+				<h1><?php print t('We Are Working On <span>Spatikasarees.com</span>'); ?></h1>
 				<p class="lead"><?php print $content; ?></p>
 			</div>
 			

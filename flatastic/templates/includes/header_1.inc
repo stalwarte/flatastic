@@ -16,7 +16,7 @@ $data = arg(0);
 <header class="type_4" role="banner">
     <!--header top part-->
     <?php if ($page['topbar_4']) : ?>
-    <div class="h_top_part type_2">
+    <div class="h_top_part type_2 hidden-xs">
         <div class="container">
             <div class="row clearfix">
                 <?php print render($page['topbar_4']); ?>
@@ -73,7 +73,7 @@ $data = arg(0);
                         </button> -->
                     </div>
                 </div>
-                <div class="col-md-2 f_right">
+                <div class="col-md-2 f_right hidden-xs mobile-hide">
                   <ul class="d_inline_b horizontal_list clearfix t_align_l f_right f_xs_none site_settings">
                       <!--like-->
                       <?php if(module_exists('flag')):

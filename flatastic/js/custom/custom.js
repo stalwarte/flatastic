@@ -84,7 +84,7 @@ function viewCarousel(quick_view_product_id){
 }
 (function($){
     $(document).ready(function(){
-
+        var wW = $(window).width();
         $('#block-menu-menu-taxonomy-menu .categories_list > li:first-child > a').click();
         $('.view-product-interior-style-2 .views-row-even .col-sm-6:first-child').addClass('col-sm-push-6');
         $('.view-product-interior-style-2 .views-row-even .col-sm-6:last-child').addClass('col-sm-pull-6');
@@ -188,6 +188,73 @@ function viewCarousel(quick_view_product_id){
       $('#product_block-block_new_collection .photoframe').removeClass('shadow');
       // $('#product_block-block_new_collection figure').removeClass('photoframe');
 
+      // Nav fix
+      $('.tb-megamenu-nav > li:last-child, .not-front .tb-megamenu-nav > li').addClass('active');
+
+       var banner_wrap = $('#block-views-image-product-category-block').detach();
+       //alert(banner_wrap);
+      // $('.breadcrumbs').append(banner_wrap);
+      $('<div class="new_header"></div>').insertAfter('.breadcrumbs');
+      $('.new_header').append(banner_wrap);
+
+      // Falls custom_checkBox
+      var isChecked = false;
+      $('.falls').on('click', function() {
+        isChecked = $(this).find('.falls_Check').attr('aria-hidden');
+        console.log(isChecked, 'test');
+        if (isChecked === "true") {
+          console.log(isChecked);
+          $(this).find('.falls_Check').attr('aria-hidden', !isChecked);
+          $('.form-item-attributes-field-falls-selection input').eq(0).trigger('click');
+          isChecked = false;
+        } else {
+          isChecked = true;
+          $(this).find('.falls_Check').attr('aria-hidden', isChecked);
+          $('.form-item-attributes-field-falls-selection input').eq(1).trigger('click');
+
+        }
+      });
+
+
+      //Stiching checkbox
+      var isStichingChecked = false;
+      $('.stiching').on('click', function() {
+        isStichingChecked = $(this).find('.stiching_Check').attr('aria-hidden');
+        if (isStichingChecked === "true") {
+          $(this).find('.stiching_Check').attr('aria-hidden', !isStichingChecked);
+          isStichingChecked = false;
+        } else {
+          isStichingChecked = true;
+          $(this).find('.stiching_Check').attr('aria-hidden', isStichingChecked);
+          $('.custom-popup-cover').fadeIn();
+        }
+      });
+
+
+    $(document).keydown(function(e) {
+          if (e.keyCode == 27) {
+              $('.custom-popup-cover').fadeOut();
+          }
+      });
+
+      // PopUp
+      $('body').append('<div class="custom-popup-cover"><div class="custom_popup"><div class="custom_pop_wrap"><h1>SpatikaSarees</h1><div class="message_pop">Thankyou!! <br> We will contact you within 24 hrs</div><i class="fa fa-window-close" aria-hidden="true"></i></div></div></div>');
+      $('.custom-popup-cover').on('click', function() {
+        $(this).fadeOut();
+      });
+
+
+
+  if(wW < 768) {
+    var detachHeaderNav = $('.users_nav').children().detach();
+    $('.tb-megamenu-nav').append(detachHeaderNav);
+
+    var menuDetach = $('.menu_wrap').detach();
+    $('.s_form_wrap_2').prepend(menuDetach).append('<a href="tel:+919940144790"><i class="fa fa-phone" aria-hidden="true"></i></a>');
+    $('.h_top_part').hide();
+
+
+  }
     });
 
 
