@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
 
     // Add class newsletter form
     jQuery('.block-newsletter .form-submit').addClass('m-top-20 button_type_8 r_corners bg_scheme_color color_light tr_all_hover');
-    
+
     //Add class menu
     jQuery('.main_menu .active').parent().addClass('current');
     jQuery('.main_menu .active').removeClass('active');
@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 
     // Out of Stock
     jQuery('.out-of-stock').val('Out of Stock');
-	
+
 	jQuery('.pager-load-more .next a').html('Load More');
 
     //Menu Carousel
@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
         jQuery(this).parent().toggleClass('m-icon');
     });
 
-    
+
 });
 /*jQuery(window).onload(function(){
 
@@ -84,7 +84,7 @@ function viewCarousel(quick_view_product_id){
 }
 (function($){
     $(document).ready(function(){
-
+        var wW = $(window).width();
         $('#block-menu-menu-taxonomy-menu .categories_list > li:first-child > a').click();
         $('.view-product-interior-style-2 .views-row-even .col-sm-6:first-child').addClass('col-sm-push-6');
         $('.view-product-interior-style-2 .views-row-even .col-sm-6:last-child').addClass('col-sm-pull-6');
@@ -143,12 +143,119 @@ function viewCarousel(quick_view_product_id){
             $('.navigation-onepage').toggle(800);
             $(this).toggleClass('active');
 
-        })
+        });
+
+    //  $('.pane-title').wrap('<div class="featured_wrap"><span>');
+      $('.view-id-product_block .view-header h2').wrap('<div class="featured_wrap"><span>');
+      $('.featured_wrap span').after('<p>Chettinad Cotton saree with hand embroidered readymade blouse</p>')
 
 
 
+      // Keep only 3 featured collections
+      $('.view-display-id-block_featured .products_container > div:gt(2)').hide();
+      $('.view-display-id-block_featured .products_container').append('<div class="glass_wrap"><div class="glass_inner_wrap"><div class="text_block"><h1>SpatikaSarees</h1><h3>Featured Collections</h3><a class="exploreBtn" href="#">Explore the collection</a></div><ul class="cat_list"><li><a href="/shop/cotton">Cotton</a></li><li><a href="/shop/silk">Silk</a></li><li><a href="/shop/silk-cotton">Silk Cotton</a></li></ul></div></div>');
 
-    })
+
+      // var cat_list = '';
+      // $('.tb-megamenu-nav li:first-child').find('.tb-megamenu-submenu .level-1 li').each(function() {
+      //   cat_list+= <$(this).context.innerHTML;
+      // });
+      //
+      // console.log(cat_list, $('.glass_wrap .glass_inner_wrap a.exploreBtn:hover .cat_list').length);
+      // $('.glass_wrap .glass_inner_wrap a.exploreBtn:hover .cat_list').append(cat_list);
+
+
+      $('.glass_wrap .glass_inner_wrap a.exploreBtn').mouseover(function() {
+        $('.cat_list').css({
+          'margin-top': '15px',
+          'opacity': 1
+        });
+      }).mouseleave(function() {
+        $('.cat_list').css({
+          'margin-top': '15px',
+          'opacity': 1
+        });
+      });
+
+      $('.glass_wrap').mouseleave(function() {
+        console.log('hi');
+        $('.cat_list').css({
+          'margin-top': '0px',
+          'opacity': 0
+        });
+      });
+
+      $('#product_block-block_new_collection .photoframe').removeClass('shadow');
+      // $('#product_block-block_new_collection figure').removeClass('photoframe');
+
+      // Nav fix
+      $('.tb-megamenu-nav > li:last-child, .not-front .tb-megamenu-nav > li').addClass('active');
+
+       var banner_wrap = $('#block-views-image-product-category-block').detach();
+       //alert(banner_wrap);
+      // $('.breadcrumbs').append(banner_wrap);
+      $('<div class="new_header"></div>').insertAfter('.breadcrumbs');
+      $('.new_header').append(banner_wrap);
+
+      // Falls custom_checkBox
+      var isChecked = false;
+      $('.falls').on('click', function() {
+        isChecked = $(this).find('.falls_Check').attr('aria-hidden');
+        console.log(isChecked, 'test');
+        if (isChecked === "true") {
+          console.log(isChecked);
+          $(this).find('.falls_Check').attr('aria-hidden', !isChecked);
+          $('.form-item-attributes-field-falls-selection input').eq(0).trigger('click');
+          isChecked = false;
+        } else {
+          isChecked = true;
+          $(this).find('.falls_Check').attr('aria-hidden', isChecked);
+          $('.form-item-attributes-field-falls-selection input').eq(1).trigger('click');
+
+        }
+      });
+
+
+      //Stiching checkbox
+      var isStichingChecked = false;
+      $('.stiching').on('click', function() {
+        isStichingChecked = $(this).find('.stiching_Check').attr('aria-hidden');
+        if (isStichingChecked === "true") {
+          $(this).find('.stiching_Check').attr('aria-hidden', !isStichingChecked);
+          isStichingChecked = false;
+        } else {
+          isStichingChecked = true;
+          $(this).find('.stiching_Check').attr('aria-hidden', isStichingChecked);
+          $('.custom-popup-cover').fadeIn();
+        }
+      });
+
+
+    $(document).keydown(function(e) {
+          if (e.keyCode == 27) {
+              $('.custom-popup-cover').fadeOut();
+          }
+      });
+
+      // PopUp
+      $('body').append('<div class="custom-popup-cover"><div class="custom_popup"><div class="custom_pop_wrap"><h1>SpatikaSarees</h1><div class="message_pop">Thankyou!! <br> We will contact you within 24 hrs</div><i class="fa fa-window-close" aria-hidden="true"></i></div></div></div>');
+      $('.custom-popup-cover').on('click', function() {
+        $(this).fadeOut();
+      });
+
+
+
+  if(wW < 768) {
+    var detachHeaderNav = $('.users_nav').children().detach();
+    $('.tb-megamenu-nav').append(detachHeaderNav);
+
+    var menuDetach = $('.menu_wrap').detach();
+    $('.s_form_wrap_2').prepend(menuDetach).append('<a href="tel:+919940144790"><i class="fa fa-phone" aria-hidden="true"></i></a>');
+    $('.h_top_part').hide();
+
+
+  }
+    });
 
 
 })(jQuery);
