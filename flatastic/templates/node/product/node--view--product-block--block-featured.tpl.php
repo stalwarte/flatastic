@@ -59,15 +59,15 @@ if (!empty($node->field_image['und'])) {
             <h5 class="m_bottom_10"><a href="<?php echo $node_url ?>" class="color_dark ellipsis"><?php print $title; ?></a></h5>
             <div class="clearfix m_bottom_15">
                 <!--rating-->
-                <div class="horizontal_list type_2 m_bottom_10 d_inline_b clearfix rating_list tr_all_hover">
+                <!-- <div class="horizontal_list type_2 m_bottom_10 d_inline_b clearfix rating_list tr_all_hover">
                     <?php print render($content['field_rating']); ?>
-                </div>
+                </div> -->
                 <p class="scheme_color f_size_large">
                     <s><?php print render($content['product:field_regular_price']);?></s>
                     <?php print render($content['product:commerce_price']); ?>
                 </p>
             </div>
-            <div class="clearfix m_bottom_15 relative">
+            <!-- <div class="clearfix m_bottom_15 relative">
                 <div class="p_left"><?php print render($content['field_product']); ?></div>
                 <div class="p_right">
 					<ul class="horizontal_list d_inline_b l_width_divider">
@@ -78,7 +78,7 @@ if (!empty($node->field_image['und'])) {
 						</li>
 					</ul>
 				</div>
-            </div>
+            </div> -->
         </figcaption>
     </figure>
 </div>

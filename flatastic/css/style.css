@@ -2328,18 +2328,33 @@ hr{
 .product_item .photoframe figcaption,.owl-item > .photoframe figcaption{
 	padding:16px 0 12px;
 }
-.product_item .photoframe.type_2 figcaption{
+.product_item .photoframe.type_2 figcaption {
 	padding:3px 10px 0 0;
 }
-.product_item .photoframe img,.owl-item > .photoframe img,
-.simple_slide_show img{
+.product_item .photoframe.type_2 figcaption > h5 {
+	margin-bottom: 0;
+}
+.front .product_item .photoframe img,.owl-item > .photoframe img,
+.front .simple_slide_show img{
 	-webkit-transform:none !important;
 	-moz-transform:none !important;
 	-o-transform:none !important;
 	-ms-transform:none !important;
 	transform:none !important;
 	height: auto;
+	width: 184px;
 }
+.product_item .photoframe img,.owl-item > .photoframe img, .simple_slide_show img{
+	-webkit-transform:none !important;
+	-moz-transform:none !important;
+	-o-transform:none !important;
+	-ms-transform:none !important;
+	transform:none !important;
+	height: auto;
+	width: 347px;
+}
+
+
 .pp_wrap{
 	z-index:1;
 }
@@ -4152,18 +4167,38 @@ fieldset legend .close_fieldset{
 }
 
 
-.products_container:not(.list_type) .product_item .photoframe, .nc_carousel .owl-item .photoframe, .wfilter_carousel .photoframe, .bestsellers_carousel .photoframe {
-	width: 165px;
+.front .products_container:not(.list_type) .product_item .photoframe, .front .nc_carousel .owl-item .photoframe, .front .wfilter_carousel .photoframe, .front .bestsellers_carousel .photoframe {
+	width: 180px;
+	float: left;
+	margin-bottom: 0;
+}
+.front .view-display-id-block_new_collection {
+	margin-bottom: 0 !important;
+}
+.front .page_content_offset {
+	padding-bottom: 0;
+}
+.front #footer {
+	padding-top: 0;
 }
 .front .product_item, .front .owl-item > figure > a, .front .product_item, .front .owl-item > .photoframe a > img {
 	height: 220px;
     width: 165px;
 }
 .front .owl-item {
-	width: 185px !important;
+	width: 170px !important;
 }
 .front .photoframe {
 	border: 0px;
+}
+/* new colletions slider */
+.front .owl-wrapper-outer.autoHeight {
+	height: auto !important;
+}
+
+.front .owl-wrapper {
+	position: static;
+	width: auto !important;
 }
 /* custom css Shiv ends */
 
