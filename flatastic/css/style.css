@@ -3838,6 +3838,7 @@ fieldset legend .close_fieldset{
 	}
 }
 @media only screen and (max-width:767px){
+	/* Mobile landscape start shiv */
 	.boxed_layout{
 		margin:0 10px;
 	}
@@ -4161,6 +4162,7 @@ fieldset legend .close_fieldset{
 	top: 0px;
 	left: 0px;
 	z-index: 9999;
+	width: 98%;
 }
 .region-slider {
 	margin-top: 105px;
@@ -4186,7 +4188,7 @@ fieldset legend .close_fieldset{
     width: 165px;
 }
 .front .owl-item {
-	width: 170px !important;
+	width: 155px !important;
 }
 .front .photoframe {
 	border: 0px;
@@ -4203,6 +4205,8 @@ fieldset legend .close_fieldset{
 /* custom css Shiv ends */
 
 
+
+/* Mobile landscape end shiv */
 }
 @media only screen and (max-width:480px){
 	.dropdown_list{
@@ -4295,6 +4299,24 @@ fieldset legend .close_fieldset{
 	.subscribe_form_2 input[type="email"]{
 		width:100% !important;
 	}
+	[role="banner"].type_4 {
+		background: #fff;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: 9999;
+		width: auto;
+	}
+	.simplenews-subscribe .form-text, #simplenews-subscriptions-multi-block-form .form-text {
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    width: 215px;
+    line-height: 69px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
 }
 @media only screen and (max-width:393px){
 	.d_exs_block{

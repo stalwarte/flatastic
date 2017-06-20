@@ -2521,6 +2521,24 @@ margin-left: 40px;
     height: 65px;
     width: 59px;
   }
+
+  .glass_wrap {
+    background: rgba(255,255,255, 0.8);
+    padding: 10px;
+    height: 480px;
+    width: 480px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -240px;
+    margin-top: -272px;
+    z-index: 99;
+    display: table;
+  }
+
+  .text_block {
+    margin-top: 130px;
+  }
   /*#product_block-block_new_collection figcaption > div.clearfix div.commerce-product-field-commerce-price {
     float: left;
     margin-right: 25px;
@@ -2763,7 +2781,7 @@ margin-left: 40px;
 .front .product_item, .front .owl-item > figure > a, .front .product_item, .front .owl-item > .photoframe a > img {
   height: 190px;
   float: left;
-  width: 170px !important;
+  width: 155px !important;
   position: static !important;
   transform: inherit !important;
   margin-top: 0;
@@ -2813,7 +2831,7 @@ margin-left: 40px;
     color: #000;
     background: #fff;
     border: 1px solid #000;
-    width: 215px;
+    width: 475px;
     line-height: 69px;
     height: 50px;
     text-transform: uppercase;
@@ -2854,6 +2872,26 @@ margin-left: 40px;
   padding-left: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.front .glass_wrap {
+  background: rgba(255,255,255, 0.8);
+    padding: 10px;
+    height: 255px;
+    width: 348px;
+    position: static;
+    left: 50%;
+    top: 50%;
+    margin-left: auto;
+    margin-top: auto;
+    z-index: 99;
+    display: table;
+    margin: 0 auto;
+
+}
+
+.front .glass_wrap .text_block {
+  margin-top: 30px;
 }
 /* custom css for devices ends shiv */
 
@@ -2899,6 +2937,22 @@ margin-left: 40px;
 }
 @media only screen and (max-width: 550px){
     .pane-interior-portfolio .d_table_cell{overflow-x: scroll}
+    /* custom css start shiv */
+      .front .owl-item {
+        width: 172px !important;
+      }
+      .front .product_item, .front .owl-item > figure > a, .front .product_item, .front .owl-item > .photoframe a > img {
+        width: 180px !important;
+      }
+
+      .simplenews-subscribe .form-text, #simplenews-subscriptions-multi-block-form .form-text {
+        width: 215px !important;
+      }
+
+      .front .glass_wrap {
+        margin-bottom: 30px;
+      }
+    /* custom css end shiv */
 }
 
 /*iphone*/
@@ -3377,20 +3431,6 @@ h2.pane-title, .featured_wrap span h2 {
 }
 
 
-.glass_wrap {
-  background: rgba(255,255,255, 0.8);
-  padding: 10px;
-  height: 480px;
-  width: 480px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -240px;
-  margin-top: -272px;
-  z-index: 99;
-  display: table;
-}
-
 .glass_wrap .glass_inner_wrap {
   border: 1px solid #000;
   padding: 10px;
@@ -3447,10 +3487,6 @@ h2.pane-title, .featured_wrap span h2 {
 .glass_wrap .glass_inner_wrap .cat_list li a{
   color: #000;
   font-size: 18px;
-}
-
-.text_block {
-  margin-top: 130px;
 }
 
 .cat_list { opacity:0;}
