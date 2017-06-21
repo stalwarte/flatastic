@@ -2565,6 +2565,20 @@ margin-left: 40px;
     margin-left: -250px;
     top: 50%;
   }
+
+  .first_temp_logo {
+    display: none;
+  }
+
+  .sticky .first_temp_logo {
+    position: fixed !important;
+    left: 50%;
+    margin-left: -588px !important;
+    color: #f8007b;
+    font-size: 40px;
+    margin-top: 14px;
+    display: block;
+  }
   /* for desktop custom ends shiv */
 
 }
