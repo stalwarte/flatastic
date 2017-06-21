@@ -101,7 +101,7 @@ body{
 	margin:0 auto;
 }
 [class*="layout"],.menu_wrap.type_3{
-	background:#fafbfb;
+	background:#fff;
 }
 .tt_uppercase{
 	text-transform: uppercase;
@@ -3001,7 +3001,7 @@ aside .addthis_widget_container{
 }
 .searchform_wrap[class*="type_"],.searchform_wrap[class*="type_"].opened,
 .searchform_wrap[class*="type_"].closed{
-	background:#FAFBFB;
+	background:#fff;
 	-webkit-transform:none;
 	-moz-transform:none;
 	-o-transform:none;

@@ -258,8 +258,18 @@ function viewCarousel(quick_view_product_id){
     $('.s_form_wrap_2').prepend(menuDetach).append('<a href="tel:+919940144790"><i class="fa fa-phone" aria-hidden="true"></i></a>');
     $('.h_top_part').hide();
 
-jQuery('<div class="glass_wrap"><div class="glass_inner_wrap"><div class="text_block"><h1>SpatikaSarees</h1><h3>Featured Collections</h3><a class="exploreBtn" href="#">Explore the collection</a></div><ul class="cat_list"><li><a href="/shop/cotton">Cotton</a></li><li><a href="/shop/silk">Silk</a></li><li><a href="/shop/silk-cotton">Silk Cotton</a></li></ul></div></div>').insertAfter('.panel-pane:first-child');
+    jQuery('<div class="glass_wrap"><div class="glass_inner_wrap"><div class="text_block"><h1>SpatikaSarees</h1><h3>Featured Collections</h3><a class="exploreBtn" href="#">Explore the collection</a></div><ul class="cat_list"><li><a href="/shop/cotton">Cotton</a></li><li><a href="/shop/silk">Silk</a></li><li><a href="/shop/silk-cotton">Silk Cotton</a></li></ul></div></div>').insertAfter('.panel-pane:first-child');
   }
+
+  if($('.message .container .status').length > 0) {
+    $('.message').fadeIn();
+  }
+
+    $('.message-close').on('click', function() {
+      if($(this).parent().hasClass('messages')) {
+        $('.message').first().fadeOut();
+      }
+    });
     });
 
 
