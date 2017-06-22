@@ -101,7 +101,7 @@ body{
 	margin:0 auto;
 }
 [class*="layout"],.menu_wrap.type_3{
-	background:#fafbfb;
+	background:#fff;
 }
 .tt_uppercase{
 	text-transform: uppercase;
@@ -697,6 +697,7 @@ blockquote:after{
 	/*background:#323a45;*/
 	color:#000;
 	padding:6px 0;
+	display: block !important;
 }
 .h_bot_part{
 	padding-top:29px;
@@ -1898,11 +1899,11 @@ blockquote:after{
   color: #000;
   background: #ffffff;
   position: fixed;
-  right: 74px;
+  right: 30px;
+	bottom: 190px;
   left: auto;
   margin: -20px 0 0 620px;
   /* top: 50%; */
-  top: 60%;
   font-size: 1.65em;
   border: 1px solid #000;
 }
@@ -2328,18 +2329,33 @@ hr{
 .product_item .photoframe figcaption,.owl-item > .photoframe figcaption{
 	padding:16px 0 12px;
 }
-.product_item .photoframe.type_2 figcaption{
+.product_item .photoframe.type_2 figcaption {
 	padding:3px 10px 0 0;
 }
-.product_item .photoframe img,.owl-item > .photoframe img,
-.simple_slide_show img{
-	-webkit-transform:none !important;
+.product_item .photoframe.type_2 figcaption > h5 {
+	margin-bottom: 0;
+}
+.front .product_item .photoframe img,.owl-item > .photoframe img,
+.front .simple_slide_show img{
+	/*-webkit-transform:none !important;
 	-moz-transform:none !important;
 	-o-transform:none !important;
 	-ms-transform:none !important;
-	transform:none !important;
+	transform:none !important;*/
 	height: auto;
+	width: 184px;
 }
+.product_item .photoframe img,.owl-item > .photoframe img, .simple_slide_show img{
+	/*-webkit-transform:none !important;
+	-moz-transform:none !important;
+	-o-transform:none !important;
+	-ms-transform:none !important;
+	transform:none !important;*/
+	height: auto;
+	width: 347px;
+}
+
+
 .pp_wrap{
 	z-index:1;
 }
@@ -2986,7 +3002,7 @@ aside .addthis_widget_container{
 }
 .searchform_wrap[class*="type_"],.searchform_wrap[class*="type_"].opened,
 .searchform_wrap[class*="type_"].closed{
-	background:#FAFBFB;
+	background:#fff;
 	-webkit-transform:none;
 	-moz-transform:none;
 	-o-transform:none;
@@ -3145,7 +3161,7 @@ fieldset legend .close_fieldset{
 
 #footer {
 	background: #fff;
-  color: #bdc3c7;
+  color: #000;
   float: left;
   padding: 45px 0 0;
   width: 100%;
@@ -3823,6 +3839,7 @@ fieldset legend .close_fieldset{
 	}
 }
 @media only screen and (max-width:767px){
+	/* Mobile landscape start shiv */
 	.boxed_layout{
 		margin:0 10px;
 	}
@@ -4146,28 +4163,51 @@ fieldset legend .close_fieldset{
 	top: 0px;
 	left: 0px;
 	z-index: 9999;
+	width: 98%;
 }
 .region-slider {
 	margin-top: 105px;
 }
 
 
-.products_container:not(.list_type) .product_item .photoframe, .nc_carousel .owl-item .photoframe, .wfilter_carousel .photoframe, .bestsellers_carousel .photoframe {
-	width: 165px;
+.front .products_container:not(.list_type) .product_item .photoframe, .front .nc_carousel .owl-item .photoframe, .front .wfilter_carousel .photoframe, .front .bestsellers_carousel .photoframe {
+	width: 180px;
+	float: left;
+	margin-bottom: 0;
+}
+.front .view-display-id-block_new_collection {
+	margin-bottom: 0 !important;
+}
+.front .page_content_offset {
+	padding-bottom: 0;
+}
+.front #footer {
+	padding-top: 0;
 }
 .front .product_item, .front .owl-item > figure > a, .front .product_item, .front .owl-item > .photoframe a > img {
 	height: 220px;
     width: 165px;
 }
-.front .owl-item {
-	width: 185px !important;
+.front #product_block-block_new_collection .owl-item {
+	width: 155px !important;
 }
 .front .photoframe {
 	border: 0px;
 }
+/* new colletions slider */
+.front .owl-wrapper-outer.autoHeight {
+	height: auto !important;
+}
+
+.front .owl-wrapper {
+	position: static;
+	width: auto !important;
+}
 /* custom css Shiv ends */
 
 
+
+/* Mobile landscape end shiv */
 }
 @media only screen and (max-width:480px){
 	.dropdown_list{
@@ -4260,6 +4300,24 @@ fieldset legend .close_fieldset{
 	.subscribe_form_2 input[type="email"]{
 		width:100% !important;
 	}
+	[role="banner"].type_4 {
+		background: #fff;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: 9999;
+		width: auto;
+	}
+	.simplenews-subscribe .form-text, #simplenews-subscriptions-multi-block-form .form-text {
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    width: 215px;
+    line-height: 69px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
 }
 @media only screen and (max-width:393px){
 	.d_exs_block{

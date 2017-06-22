@@ -10,7 +10,7 @@ if (!empty($node->field_product['und'][0])) {
 
 $single_image = ' ';
 if (!empty($node->field_single_image['und'])) {
-    $single_image = image_style_url("product_block_242x242", $node->field_single_image['und'][0]['uri']);
+    $single_image = image_style_url("product_image_375x578", $node->field_single_image['und'][0]['uri']);
 }
 $str_att = '';
 if (isset($node->field_product_attributes)):

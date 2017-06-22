@@ -147,14 +147,22 @@ function viewCarousel(quick_view_product_id){
 
     //  $('.pane-title').wrap('<div class="featured_wrap"><span>');
       $('.view-id-product_block .view-header h2').wrap('<div class="featured_wrap"><span>');
-      $('.featured_wrap span').after('<p>Chettinad Cotton saree with hand embroidered readymade blouse</p>')
+      $('.view-id-product_block .featured_wrap span').after('<p>Chettinad Cotton saree with hand embroidered readymade blouse</p>');
+
+      $('#block-views-testimonial-block-1 .view-header h2').wrap('<div class="featured_wrap"><span>');
+      $('#block-views-testimonial-block-1 .featured_wrap span').after('<p>Chettinad Cotton saree with hand embroidered readymade blouse</p>');
 
 
 
       // Keep only 3 featured collections
-      $('.view-display-id-block_featured .products_container > div:gt(2)').hide();
-      $('.view-display-id-block_featured .products_container').append('<div class="glass_wrap"><div class="glass_inner_wrap"><div class="text_block"><h1>SpatikaSarees</h1><h3>Featured Collections</h3><a class="exploreBtn" href="#">Explore the collection</a></div><ul class="cat_list"><li><a href="/shop/cotton">Cotton</a></li><li><a href="/shop/silk">Silk</a></li><li><a href="/shop/silk-cotton">Silk Cotton</a></li></ul></div></div>');
+      if(wW > 768) {
+        $('.view-display-id-block_featured .products_container > div:gt(2)').hide();
+        $('.view-display-id-block_featured .products_container').append('<div class="glass_wrap"><div class="glass_inner_wrap"><div class="text_block"><h1>SpatikaSarees</h1><h3>Featured Collections</h3><a class="exploreBtn" href="#">Explore the collection</a></div><ul class="cat_list"><li><a href="/shop/cotton">Cotton</a></li><li><a href="/shop/silk">Silk</a></li><li><a href="/shop/silk-cotton">Silk Cotton</a></li></ul></div></div>');
+      }
 
+
+    //  var placeQuantity = $('.product_quick_view .p-quantity').detach();
+    //   $('.field-name-commerce-price').append(placeQuantity);
 
       // var cat_list = '';
       // $('.tb-megamenu-nav li:first-child').find('.tb-megamenu-submenu .level-1 li').each(function() {
@@ -205,12 +213,12 @@ function viewCarousel(quick_view_product_id){
         if (isChecked === "true") {
           console.log(isChecked);
           $(this).find('.falls_Check').attr('aria-hidden', !isChecked);
-          $('.form-item-attributes-field-falls-selection input').eq(0).trigger('click');
+          $('.defaultFalls .attribute-widgets .form-radios input').eq(0).trigger('click');
           isChecked = false;
         } else {
           isChecked = true;
           $(this).find('.falls_Check').attr('aria-hidden', isChecked);
-          $('.form-item-attributes-field-falls-selection input').eq(1).trigger('click');
+          $('.defaultFalls .attribute-widgets .form-radios input').eq(1).trigger('click');
 
         }
       });
@@ -253,8 +261,18 @@ function viewCarousel(quick_view_product_id){
     $('.s_form_wrap_2').prepend(menuDetach).append('<a href="tel:+919940144790"><i class="fa fa-phone" aria-hidden="true"></i></a>');
     $('.h_top_part').hide();
 
-
+    jQuery('<div class="glass_wrap"><div class="glass_inner_wrap"><div class="text_block"><h1>SpatikaSarees</h1><h3>Featured Collections</h3><a class="exploreBtn" href="#">Explore the collection</a></div><ul class="cat_list"><li><a href="/shop/cotton">Cotton</a></li><li><a href="/shop/silk">Silk</a></li><li><a href="/shop/silk-cotton">Silk Cotton</a></li></ul></div></div>').insertAfter('.panel-pane:first-child');
   }
+
+  if($('.message .container .status').length > 0) {
+    // $('.message').fadeIn();
+  }
+
+    $('.message-close').on('click', function() {
+      if($(this).parent().hasClass('messages')) {
+        $('.message').first().fadeOut();
+      }
+    });
     });
 
 

@@ -16,7 +16,7 @@ $data = arg(0);
 <header class="type_4" role="banner">
     <!--header top part-->
     <?php if ($page['topbar_4']) : ?>
-    <div class="h_top_part type_2 hidden-xs">
+    <div class="h_top_part type_2">
         <div class="container">
             <div class="row clearfix">
                 <?php print render($page['topbar_4']); ?>
@@ -122,6 +122,9 @@ $data = arg(0);
     <!--main menu container-->
     <div class="<?php if($data == 'index_construction'): print 'bg-menu-home5'; endif;?> menu_wrap type_3 relative ">
         <div class="container clearfix t_align_c">
+
+            <!-- <div class="first_temp_logo">SpatikaSarees</div> -->
+
             <!--button for responsive menu-->
             <button id="menu_button" class="r_corners centered_db d_none tr_all_hover d_xs_block m_bottom_10">
                 <span class="centered_db r_corners"></span>
