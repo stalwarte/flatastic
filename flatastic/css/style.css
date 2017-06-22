@@ -697,6 +697,7 @@ blockquote:after{
 	/*background:#323a45;*/
 	color:#000;
 	padding:6px 0;
+	display: block !important;
 }
 .h_bot_part{
 	padding-top:29px;
@@ -1898,11 +1899,11 @@ blockquote:after{
   color: #000;
   background: #ffffff;
   position: fixed;
-  right: 74px;
+  right: 30px;
+	bottom: 190px;
   left: auto;
   margin: -20px 0 0 620px;
   /* top: 50%; */
-  top: 60%;
   font-size: 1.65em;
   border: 1px solid #000;
 }
@@ -2336,20 +2337,20 @@ hr{
 }
 .front .product_item .photoframe img,.owl-item > .photoframe img,
 .front .simple_slide_show img{
-	-webkit-transform:none !important;
+	/*-webkit-transform:none !important;
 	-moz-transform:none !important;
 	-o-transform:none !important;
 	-ms-transform:none !important;
-	transform:none !important;
+	transform:none !important;*/
 	height: auto;
 	width: 184px;
 }
 .product_item .photoframe img,.owl-item > .photoframe img, .simple_slide_show img{
-	-webkit-transform:none !important;
+	/*-webkit-transform:none !important;
 	-moz-transform:none !important;
 	-o-transform:none !important;
 	-ms-transform:none !important;
-	transform:none !important;
+	transform:none !important;*/
 	height: auto;
 	width: 347px;
 }
@@ -3160,7 +3161,7 @@ fieldset legend .close_fieldset{
 
 #footer {
 	background: #fff;
-  color: #bdc3c7;
+  color: #000;
   float: left;
   padding: 45px 0 0;
   width: 100%;
@@ -4187,7 +4188,7 @@ fieldset legend .close_fieldset{
 	height: 220px;
     width: 165px;
 }
-.front .owl-item {
+.front #product_block-block_new_collection .owl-item {
 	width: 155px !important;
 }
 .front .photoframe {

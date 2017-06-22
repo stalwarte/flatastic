@@ -147,7 +147,10 @@ function viewCarousel(quick_view_product_id){
 
     //  $('.pane-title').wrap('<div class="featured_wrap"><span>');
       $('.view-id-product_block .view-header h2').wrap('<div class="featured_wrap"><span>');
-      $('.featured_wrap span').after('<p>Chettinad Cotton saree with hand embroidered readymade blouse</p>')
+      $('.view-id-product_block .featured_wrap span').after('<p>Chettinad Cotton saree with hand embroidered readymade blouse</p>');
+
+      $('#block-views-testimonial-block-1 .view-header h2').wrap('<div class="featured_wrap"><span>');
+      $('#block-views-testimonial-block-1 .featured_wrap span').after('<p>Chettinad Cotton saree with hand embroidered readymade blouse</p>');
 
 
 
@@ -210,12 +213,12 @@ function viewCarousel(quick_view_product_id){
         if (isChecked === "true") {
           console.log(isChecked);
           $(this).find('.falls_Check').attr('aria-hidden', !isChecked);
-          $('.form-item-attributes-field-falls-selection input').eq(0).trigger('click');
+          $('.defaultFalls .attribute-widgets .form-radios input').eq(0).trigger('click');
           isChecked = false;
         } else {
           isChecked = true;
           $(this).find('.falls_Check').attr('aria-hidden', isChecked);
-          $('.form-item-attributes-field-falls-selection input').eq(1).trigger('click');
+          $('.defaultFalls .attribute-widgets .form-radios input').eq(1).trigger('click');
 
         }
       });
@@ -262,7 +265,7 @@ function viewCarousel(quick_view_product_id){
   }
 
   if($('.message .container .status').length > 0) {
-    $('.message').fadeIn();
+    // $('.message').fadeIn();
   }
 
     $('.message-close').on('click', function() {
